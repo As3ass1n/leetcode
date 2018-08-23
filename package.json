@@ -1,0 +1,22 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-twoSum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/As3ass1n/leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/As3ass1n/leetcode/issues"
+  },
+  "homepage": "https://github.com/As3ass1n/leetcode#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0"
+  }
+}
