@@ -14,5 +14,4 @@
 [66.plus-one.js](66.plus-one.js)  
 [67.add-binary.js](67.add-binary.js)  
 [69.sqrt-x.js](69.sqrt-x.js)  
-[206.reverse-linked-list.js](206.reverse-linked-list.js)  
 [242-Valid Anagram.js](242-Valid%20Anagram.js)
