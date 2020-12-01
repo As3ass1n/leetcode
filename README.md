@@ -14,4 +14,5 @@
 [66.plus-one.js](66.plus-one.js)  
 [67.add-binary.js](67.add-binary.js)  
 [69.sqrt-x.js](69.sqrt-x.js)  
+[70.climbing-stairs.js](70.climbing-stairs.js)  
 [242-Valid Anagram.js](242-Valid%20Anagram.js)
