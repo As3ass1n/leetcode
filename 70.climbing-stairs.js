@@ -10,15 +10,15 @@
  * @return {number}
  */
 
-const arr = [];
-const start = Date.now();
 var climbStairs = function(n) {
   if(n <= 2) return n;
-  if(!arr[n - 1]) {
-    arr[n - 1] = climbStairs(n - 1);
+  let q = 0, p = 1; r = 1;
+  for(let i = 0; i <= n - 2; i++){
+    q = p;
+    p = r;
+    r = q + p
   }
-  return arr[n - 1] + climbStairs(n - 2);
+  return r;
 };
-console.log(climbStairs(40), Date.now() - start);
 // @lc code=end
 
