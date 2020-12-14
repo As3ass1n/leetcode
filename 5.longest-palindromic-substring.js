@@ -10,26 +10,42 @@
  * @return {string}
  */
 
-let low = 0, maxLen = 0;
-var longestPalindrome = function(s) {
-  for(let i = 0; i < s.length; i++){
-    expandPalindrome(s, i, i);
-    expandPalindrome(s, i, i + 1);
+const isPalindrome = (str, left, right) => {
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      return false;
+    }
+    left++;
+    right--;
   }
-  console.log(s.substring(lo, lo + maxLen));
-  return s.substring(lo, lo + maxLen)
+  return true;
 };
-const expandPalindrome = (s, left, right) => {
-  while(left >= 0 && right < s.length && s[left] === s[right]){
-    left--;
-    right++;
+var longestPalindrome = function (s) {
+  if (s.length <= 1) return s;
+  // 初始化二维数组
+  const arr = new Array(s.length);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = [];
   }
-  if(maxLen < right - left - 1){
-    lo = left + 1;
-    maxLen = right - left - 1;
-  }
-}
+  let begin = 0;
+  let maxLen = 1;
 
-longestPalindrome('abbade')
+  for (let j = 1; j < s.length; j++) {
+    for (let i = 0; i < j; i++) {
+      if (s[i] !== s[j]) {
+        arr[i][j] = false;
+      } else {
+        arr[i][j] = s[i] === s[j] && (j - i < 3 || arr[i + 1][j - 1]);
+      }
+
+      if (arr[i][j] && j - i + 1 > maxLen) {
+        maxLen = j - i + 1;
+        begin = i;
+      }
+    }
+  }
+  console.log(s.substr(begin, maxLen));
+  return s.substr(begin, maxLen);
+};
+longestPalindrome("aacabdkacaa");
 // @lc code=end
-
